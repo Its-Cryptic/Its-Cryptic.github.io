@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hello World</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-</head>
-<body>
-<h1>Hello!</h1>
-<p>This site is under development.</p>
-<p>In the meantime, you can join my <a href="https://discord.com/invite/t65ynsdTnZ">Discord server</a>.</p>
-<p></p>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hello World</title>
+        <link rel="icon" href="favicon.ico">
+        <script src="GlslCanvas.js"></script>
+        <style>
+            html, body {
+              width:  100%;
+              height: 100%;
+              margin: 0;
+            }
+            canvas {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Hello!</h1>
+        <p>This site is under development.</p>
+        <p>In the meantime, you can join my <a href="https://discord.com/invite/t65ynsdTnZ">Discord server</a>.</p>
+        <p></p>
+        <canvas class="glslCanvas" data-fragment-url="shader.frag"></canvas>
+        <script>
+            const canvas = document.querySelector('.glslCanvas');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            const sandbox = new GlslCanvas(canvas);
+        </script>
+    </body>
 </html>
