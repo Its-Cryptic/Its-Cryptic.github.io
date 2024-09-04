@@ -11,6 +11,17 @@
     </head>
     <body>
         <div class="container">
+            <canvas class="glslCanvas" data-fragment-url="shader.frag"></canvas>
+            <script>
+                const canvas = document.querySelector('.glslCanvas');
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                var quality = 20; // 1 = normal
+                canvas.width = window.innerWidth / quality;
+                canvas.height = window.innerHeight / quality;
+                canvas.style.transform = 'scale('+quality+')';
+                const sandbox = new GlslCanvas(canvas);
+            </script>
             <div class = "centered">
                 <h1>Hello!</h1>
                 <p>This site is under development.</p>
