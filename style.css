@@ -43,11 +43,6 @@ h1 {
     text-shadow: 3px 3px 3px #808;
 }
 
-.canvas-container {
-    flex: 1; /* The canvas will fill the remaining space above the footer */
-    position: relative;
-}
-
 canvas {
     display: block;
     width: 100%;
@@ -141,20 +136,4 @@ div.links p.description {
     font-size: 15px;
     font-family: 'JetBrains Mono', monospace;
     line-height: 1.0;
-}
-
-a:link {
-  color: #FF5733;
-}
-
-a:visited {
-  color: #FF5733;
-}
-
-a:hover {
-  color: hotpink;
-}
-
-a:active {
-  color: blue;
 }
