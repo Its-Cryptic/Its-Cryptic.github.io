@@ -35,7 +35,7 @@ float fbm2D(vec2 st) {
     float frequency = 0.;
     //
     // Loop of octaves
-    for (int i = 0; i < 18; i++) {
+    for (int i = 0; i < 6; i++) {
         value += amplitude * noise2D(st);
         st *= 2.;
         amplitude *= .5;
