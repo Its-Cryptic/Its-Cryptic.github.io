@@ -11,10 +11,6 @@ html, body {
     width:  100%;
     height: 100%;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     font-family: JetBrains Mono;
     font-size: 20px;
     text-shadow: 3px 3px 3px #808;
@@ -31,8 +27,8 @@ h1 {
 
 canvas {
     display: block;
-    width: 20%;
-    height: 20%;
+    width: 100%;
+    height: 100%;
 }
 
 div.links div {
