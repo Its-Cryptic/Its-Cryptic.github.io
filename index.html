@@ -15,15 +15,20 @@
             <script>
                 const canvas = document.querySelector('.glslCanvas');
                 const sandbox = new GlslCanvas(canvas);
+
                 function resizeCanvas() {
-                    canvas.width = window.innerWidth;
-                    canvas.height = window.innerHeight;
+                    // Define the quality factor (e.g., 2 for half resolution)
+                    const quality = 5; // 2 = lower quality (half resolution)
 
-                    var quality = 1; // 1 = normal
+                    // Set canvas size to lower resolution
+                    canvas.width = window.innerWidth / quality;
+                    canvas.height = window.innerHeight / quality;
 
+                    // Scale the canvas back up to fill the screen
                     canvas.style.width = `${window.innerWidth}px`;
                     canvas.style.height = `${window.innerHeight}px`;
                     canvas.style.transform = `scale(${quality})`;
+                    canvas.style.transformOrigin = 'top left'; // Ensure scaling is consistent
                 }
 
                 // Listen to window resize events and adjust the canvas size
