@@ -11,14 +11,14 @@
     </head>
     <body>
         <div class="container">
-            <canvas class="glslCanvas" data-fragment-url="shader.frag"  width="800" height="800"></canvas>
+            <canvas class="glslCanvas" data-fragment-url="shader.frag"></canvas>
             <script>
                 const canvas = document.querySelector('.glslCanvas');
                 const sandbox = new GlslCanvas(canvas);
 
                 function resizeCanvas() {
                     // Define the quality factor (e.g., 2 for half resolution)
-                    const quality = 5; // 2 = lower quality (half resolution)
+                    const quality = 2; // 2 = lower quality (half resolution)
 
                     // Set canvas size to lower resolution
                     canvas.width = window.innerWidth / quality;
