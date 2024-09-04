@@ -124,15 +124,15 @@ div.links p.description {
 }
 
 .footer {
+    position: fixed; /* Keep the footer at the bottom of the screen */
     left: 50%;
-    transform: translate(-50%, -50%);
-    position: fixed;
     bottom: 0;
+    transform: translateX(-50%); /* Center the footer horizontally */
     width: 100%;
     background-color: #511845;
     color: white;
     text-align: center;
-    padding: 0px 0;
+    padding: 10px; /* Adjusted padding */
     font-size: 15px;
     font-family: 'JetBrains Mono', monospace;
     line-height: 1.0;
