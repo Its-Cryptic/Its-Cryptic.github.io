@@ -57,9 +57,9 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     float t = u_time * 1.5;
 
     fragColor = vec4(
-        domainWarp(uv*10.0 + domainWarp(uv*10.0+t)),
-        domainWarp(uv*10.0 + domainWarp(uv*10.0-vec2(t,-t))),
-        domainWarp(uv*10.0 + domainWarp(uv*10.0-t)),
+        domainWarp(uv*10.0 + t + domainWarp(uv*10.0+t)),
+        domainWarp(uv*10.0 - t + domainWarp(uv*10.0-vec2(t,-t))),
+        domainWarp(uv*10.0 + vec2(-t, t) + domainWarp(uv*10.0-t)),
         1.0
     );
 }
