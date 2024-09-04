@@ -132,7 +132,7 @@ div.links p.description {
 .footer {
     position: fixed; /* Keep the footer at the bottom of the screen */
     left: 50%;
-    bottom: 0;
+    bottom: 10px;
     transform: translateX(-50%); /* Center the footer horizontally */
     width: 100%;
     background-color: #511845;
