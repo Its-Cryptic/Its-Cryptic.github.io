@@ -55,22 +55,11 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
 
     // Time-based variables for smooth animation
     float t = u_time * 1.5;
-    float t1 = sin(t) * 0.5 + 0.5;
-    float t2 = cos(t) * 0.5 + 0.5;
 
-    float noise = domainWarp(domainWarp(uv) + uv);
-
-    // Color components
-    float r = noise*sin(2.0 * uv.x + t1) * 0.5 + 0.5;
-    float g = cos(3.0 * uv.y + t2) * 0.5 + 0.5;
-    float b = sin(4.0 * (uv.x + uv.y) + t1 + t2) * 0.5 + 0.5;
-
-    // Output the final color
-    //fragColor = vec4(r, g, b, 1.0);
     fragColor = vec4(
-        domainWarp(domainWarp(uv) + uv + t),
-        domainWarp(domainWarp(uv) + uv + 25.0 - t),
-        domainWarp(domainWarp(uv) + uv + 50.0 - t),
+        domainWarp(uv*10.0 + domainWarp(uv*10.0+t)),
+        domainWarp(uv*10.0 + domainWarp(uv*10.0-vec2(t,-t))),
+        domainWarp(uv*10.0 + domainWarp(uv*10.0-t)),
         1.0
     );
 }
