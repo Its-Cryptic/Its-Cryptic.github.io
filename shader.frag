@@ -35,7 +35,7 @@ float fbm2D(vec2 st) {
     float frequency = 0.;
     //
     // Loop of octaves
-    for (int i = 0; i < 6; i++) {
+    for (int i = 0; i < 3; i++) {
         value += amplitude * noise2D(st);
         st *= 2.;
         amplitude *= .5;
@@ -65,10 +65,10 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     float b = sin(4.0 * (uv.x + uv.y) + t1 + t2) * 0.5 + 0.5;
 
     // Output the final color
-    fragColor = vec4(r, g, b, 1.0);
+    //fragColor = vec4(r, g, b, 1.0);
     fragColor = vec4(
         domainWarp(domainWarp(uv) + uv + t),
-        domainWarp(domainWarp(uv) + uv + 25.0 - t),
+        0.0*domainWarp(domainWarp(uv) + uv + 25.0 - t),
         domainWarp(domainWarp(uv) + uv + 50.0 - t),
         1.0
     );
