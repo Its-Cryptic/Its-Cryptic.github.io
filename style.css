@@ -129,8 +129,9 @@ div.links p.description {
   transform: translate(-50%, -50%);
 }
 
-.footer {
+.foot {
     width: 100%;
+    z-index: 100;
     background-color: #511845;
     color: #C70039;
     text-align: center;
