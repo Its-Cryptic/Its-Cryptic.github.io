@@ -4,6 +4,7 @@ precision mediump float;
 
 uniform float u_time;
 uniform vec2 u_resolution;
+uniform vec2 u_mouse;
 
 float random2D (vec2 st) {
     return fract(sin(dot(st.xy,
@@ -67,7 +68,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     // Output the final color
     //fragColor = vec4(r, g, b, 1.0);
     fragColor = vec4(
-        0.0*domainWarp(domainWarp(uv) + uv + t),
+        domainWarp(domainWarp(uv) + uv + t),
         domainWarp(domainWarp(uv) + uv + 25.0 - t),
         domainWarp(domainWarp(uv) + uv + 50.0 - t),
         1.0
