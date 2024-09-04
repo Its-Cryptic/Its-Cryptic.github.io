@@ -1,11 +1,25 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@1&display=swap");:root {
-    --background-color: #0c0c0c;
-    --middleground-color: #1c1c1c;
-    --foreground-color: #ccc;
-    --highlight-color: #e4e4e4;
-    --lowlight-color: #555;
-    --link-color: #82aaff
-}
+/*
+Color Pallete: Dark
+#071C21 - Background Dark Teal
+#153B44 - Dark Teal
+#2D6E7E - Teal
+#C6DE41 - Yellow
+*/
+
+/*
+Color Pallete: Sunset
+#511845 - Background Dark Purple
+#900C3F - Sweet Dark Purple
+#C70039 - Pink Red
+#FF5733 - Orange
+*/
+/*
+$background-color: #511845;
+$secondary-color: #900C3F;
+$tertiary-color: #C70039;
+$accent-color: #FF5733;
+*/
+
 
 html, body {
     width:  100%;
@@ -15,7 +29,7 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: JetBrains Mono;
+    font-family: 'JetBrains Mono', monospace;
     font-size: 20px;
     text-shadow: 3px 3px 3px #808;
 }
@@ -23,7 +37,7 @@ html, body {
 h1 {
     color: #FF5733;
     font-size: 35px;
-    font-family: JetBrains Mono;
+    font-family: 'JetBrains Mono', monospace;
     font-weight: normal;
     margin-top: 5px;
     text-shadow: 3px 3px 3px #808;
