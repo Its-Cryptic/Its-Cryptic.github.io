@@ -137,19 +137,3 @@ div.links p.description {
     font-family: 'JetBrains Mono', monospace;
     line-height: 1.0;
 }
-
-a:link {
-  color: #FF5733;
-}
-
-a:visited {
-  color: #FF5733;
-}
-
-a:hover {
-  color: hotpink;
-}
-
-a:active {
-  color: blue;
-}
