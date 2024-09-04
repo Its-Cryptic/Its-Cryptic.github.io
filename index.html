@@ -11,26 +11,32 @@
     </head>
     <body>
         <div class="container">
-            <canvas class="glslCanvas" data-fragment-url="shader.frag"></canvas>
+            <div class="canvas-container">
+                <canvas class="glslCanvas" data-fragment-url="shader.frag"></canvas>
+            </div>
+
             <script>
                 const canvas = document.querySelector('.glslCanvas');
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-                var quality = 20; // 1 = normal
-                var s = quality + 1
-                canvas.width = window.innerWidth / quality;
-                canvas.height = window.innerHeight / quality;
-                canvas.style.transform = 'scale('+quality+')';
                 const sandbox = new GlslCanvas(canvas);
+
+                function resizeCanvas() {
+                    const canvasContainer = document.querySelector('.canvas-container');
+                    canvas.width = canvasContainer.clientWidth;
+                    canvas.height = canvasContainer.clientHeight;
+                }
+
+                window.addEventListener('resize', resizeCanvas);
+                resizeCanvas();
             </script>
-            <div class = "centered">
+
+            <div class="centered">
                 <h1>Hello!</h1>
                 <p>This site is under development.</p>
                 <div class="links">
                     <a title="Discord" href="https://discord.com/invite/t65ynsdTnZ">
                         <div style="background-image: url(discord.svg);">
                             <p class="hasdescription">Discord</p>
-                            <p class="description">Join my discord server to stay up to date with any projects im working on</p>
+                            <p class="description">Join my discord server to stay up to date with any projects I'm working on</p>
                         </div>
                     </a>
                     <a title="Github" href="https://github.com/Its-Cryptic">
@@ -41,8 +47,9 @@
                     </a>
                 </div>
             </div>
+
             <div class="footer">
-                <p>Hello! I am Aidan, some may know me as "Cryptic"/"Cryptics", I am an avid Minecraft Modder</p>
+                <p>Hello! I am Aidan, some may know me as "Cryptic"/"Cryptics", I am an avid Minecraft Modder.</p>
                 <p>My main project is Aspect, a work in progress magitech mod, though I also work on <a href="https://www.curseforge.com/minecraft/mc-mods/lodestone">Lodestone</a>.</p>
             </div>
         </div>
