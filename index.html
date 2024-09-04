@@ -13,8 +13,8 @@
             <canvas class="glslCanvas" data-fragment-url="shader.frag"></canvas>
             <script>
                 const canvas = document.querySelector('.glslCanvas');
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
+                canvas.width = window.innerWidth / 20;
+                canvas.height = window.innerHeight / 20;
                 const sandbox = new GlslCanvas(canvas);
             </script>
             <div class = "centered">
