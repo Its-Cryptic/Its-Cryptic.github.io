@@ -35,6 +35,67 @@ canvas {
     height: 20%;
 }
 
+div.links div {
+	border-radius: 30px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: 80px 80px;
+	background-position-x: 4px;
+	background-color: #511845;
+	transition: border-color 0.35s;
+	min-height: 170px;
+	padding: 10px 10px;
+	display: flex;
+	flex-direction: column;
+	background-position-x: 10px;
+	box-shadow: 0 0 10px 5px #00ff94;
+}
+.links {
+    display: inline-flex;
+    flex-direction: row;
+    width: 90vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+div.links a:link {
+	border-radius: 0;
+	padding: 0;
+    width: 400px;
+    margin:16px 20px;
+}
+
+div.links a:link:hover {
+	background-color: transparent;
+}
+
+div.links div:hover {
+	border-color: #2c3e50;
+	background-color: #81296f;
+}
+
+div.links p {
+	padding-left: 100px;
+	font-size: 36px;
+	margin-top: 21px;
+	margin-bottom: 10px;
+}
+
+div.links p.hasdescription {
+    color : #FF5733;
+	font-size: 28px;
+	margin-top: 10px;
+}
+
+div.links p.description {
+	color: magenta;
+	font-size: 20px;
+	margin-top: 5px;
+}
+
 .container {
   position: relative;
   text-align: center;
