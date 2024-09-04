@@ -17,15 +17,15 @@
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
                 var quality = 20; // 1 = normal
+                var s = quality + 1
                 canvas.width = window.innerWidth / quality;
                 canvas.height = window.innerHeight / quality;
-                canvas.style.transform = 'scale('+quality+')';
+                canvas.style.transform = 'scale('+s+')';
                 const sandbox = new GlslCanvas(canvas);
             </script>
             <div class = "centered">
                 <h1>Hello!</h1>
                 <p>This site is under development.</p>
-                <p>In the meantime, you can join my <a href="https://discord.com/invite/t65ynsdTnZ">Discord server</a>.</p>
                 <div class="links">
                     <a title="Discord" href="https://discord.com/invite/t65ynsdTnZ">
                         <div style="background-image: url(discord.svg);">
@@ -40,6 +40,10 @@
                         </div>
                     </a>
                 </div>
+            </div>
+            <div class="footer">
+                <p>Hello! I am Aidan, some may know me as "Cryptic"/"Cryptics", I am an avid Minecraft Modder</p>
+                <p>My main project is Aspect, a work in progress magitech mod, though I also work on <a href="https://www.curseforge.com/minecraft/mc-mods/lodestone">Lodestone</a>.</p>
             </div>
         </div>
     </body>

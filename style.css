@@ -122,3 +122,34 @@ div.links p.description {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.footer {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #511845;
+    color: white;
+    text-align: center;
+    padding: 0px 0;
+    font-size: 15px;
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1.0;
+}
+
+a:link {
+  color: #FF5733;
+}
+
+a:visited {
+  color: #FF5733;
+}
+
+a:hover {
+  color: hotpink;
+}
+
+a:active {
+  color: blue;
+}
