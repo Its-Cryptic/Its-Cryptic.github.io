@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to cryptics.dev</title>
+    <link rel="icon" href="magik.png">
+    <script src="GlslCanvas.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <canvas class="glslCanvas" data-fragment-url="shader.frag"></canvas>
+    <script>
+        const canvas = document.querySelector('.glslCanvas');
+        const sandbox = new GlslCanvas(canvas);
+
+        function resizeCanvas() {
+            // Define the quality factor (e.g., 2 for half resolution)
+            const quality = 3; // 2 = lower quality (half resolution)
+
+            // Set canvas size to lower resolution
+            canvas.width = window.innerWidth / quality;
+            canvas.height = window.innerHeight / quality;
+
+            // Scale the canvas back up to fill the screen
+            canvas.style.transform = 'scale('+quality+')';
+        }
+
+        // Listen to window resize events and adjust the canvas size
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas(); // Initial call to set canvas size
+    </script>
+    <div class = "centered">
+        <h1>Hello!</h1>
+        <p>This site is under development.</p>
+        <div class="links">
+            <a title="Github" href="https://github.com/Its-Cryptic">
+                <div style="background-image: url(github.svg);">
+                    <p class="hasdescription">Github</p>
+                    <p class="description">EEEEEEEEEEE</p>
+                </div>
+            </a>
+            <a title="Discord" href="https://discord.com/invite/t65ynsdTnZ">
+                <div style="background-image: url(discord.svg);">
+                    <p class="hasdescription">Discord</p>
+                    <p class="description">JJJJJJJJJJJJ</p>
+                </div>
+            </a>
+            <a title="Curseforge" href="https://www.curseforge.com/members/itsmecryptic/projects">
+                <div style="background-image: url(curseforge.svg);">
+                    <p class="hasdescription">Curseforge</p>
+                    <p class="description">You can find my mods on Curseforge</p>
+                </div>
+            </a>
+            <a title="Ko-fi" href="https://ko-fi.com/itscryptic">
+                <div style="background-image: url(kofi.svg);">
+                    <p class="hasdescription">Ko-fi</p>
+                    <p class="description">If you like my projects, feel free to support me on Ko-fi</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
