@@ -53,6 +53,33 @@ canvas {
     left: 0;
 }
 
+div.navlinks {
+    background-color: #511845;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 100px;
+    padding: 10px 10px;
+    min-height: 30px
+    box-shadow: 0 0 100px 50px #00ff94;
+    transition: border-color 0.35s;
+}
+
+div.navlinks div:hover {
+	border-color: #2c3e50;
+	background-color: #81296f;
+	font-size: 30px;
+}
+
+div.navlinks a {
+	padding-left: 30px;
+	padding-right: 30px;
+	font-size: 20px;
+	margin-top: 21px;
+	margin-bottom: 10px;
+}
+
+
 div.links div {
 	border-radius: 30px;
 	margin-top: 4px;
