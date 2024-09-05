@@ -71,6 +71,12 @@ div.navlinks div:hover {
 	font-size: 30px;
 }
 
+div.navlinks:link, div.navlinks:visited {
+    color: #900C3F;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 div.navlinks a {
 	padding-left: 30px;
 	padding-right: 30px;
